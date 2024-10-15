@@ -88,7 +88,7 @@
             var locationsVisited = 0;
             var lastLocation = 0;
             var zebraLocations = [1,8,12,22,34];
-            var lionLocation = [14];
+            var lionLocation = [25];
             var gameOver = false;
 
             function check(position) {
@@ -150,14 +150,11 @@
                 }
 
                 var lastCol = lastLocation%6;
-                var lastRow = lastLocation/6;
+                var lastRow = Math.floor(lastLocation/6);
                 var lionCol = lionLocation%6;
-                var lionRow = lionLocation/6;
+                var lionRow = Math.floor(lionLocation/6);
 
-                if(lastCol-1 == lionCol && lastRow-1 == lionRow || lastCol == lionCol && lastRow-1 == lionRow || lastCol-1 == lionCol && lastRow-1 == lionRow
-                    || lastCol-1 == lionCol && lastRow == lionRow || lastCol+1 == lionCol && lastRow == lionRow || lastCol-1 == lionCol && lastRow+1 == lionRow
-                    || lastCol == lionCol && lastRow+1 == lionRow || lastCol+1 == lionCol && lastRow+1 == lionRow) {
-
+                if(Math.abs(lastCol - lionCol) <= 1 && Math.abs(lastRow - lionRow) <= 1) {
                     helpText.innerHTML = "Rawr";
                     return;
                 }
