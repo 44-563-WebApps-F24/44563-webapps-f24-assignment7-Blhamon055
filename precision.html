@@ -14,7 +14,7 @@
 
   <button type="button"
   class="btn btn-primary"
-  onclick="startTimer()">
+  onclick="startTime()">
   Start Timer</button>
 
   <button type="button"
@@ -29,17 +29,29 @@
 
   var stopTime;
 
+  function startTime() {
+    stopTime=undefined;
+    for (let i = 0; i < 5; i++) {
+    setTimeout(function () {
+      document.getElementById("count").innerHTML = i;
+    }, (4 - i) * 1000);
+  }  
+
+  setTimeout(function () {
+    if (stopTime === undefined) {
+      document.getElementById("target").innerHTML = "Too Slow!";
+    } else {
+      let elapsedTime = stopTime - (Date.now() - 4000); 
+      document.getElementById("target").innerHTML = "Time was " + elapsedTime + " ms";
+    }
+  }, 4000);
+  }
+
   function recordTime() {
     stopTime = Date.now();
     console.log(stopTime);
-
   }
 
-  function buttonPress2() {
-    setTimeout(()=>{
-      document.getElementById('target').style.color = "red"
-    }, 3000)
-  }
   </script>
 
 </body>

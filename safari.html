@@ -88,7 +88,8 @@
             var locationsVisited = 0;
             var lastLocation = 0;
             var zebraLocations = [1,8,12,22,34];
-            var lionLocation = [25];
+            var elephantLocations = [3, 16];
+            var lionLocation = [14];
             var gameOver = false;
 
             function check(position) {
@@ -113,12 +114,12 @@
                 }
 
                 //if(number of img selected matches elephant) {change img to elephant; add one to score;}
-                /*for(i=0; i<elephantLocations.length; i++) {
+                for(i=0; i<elephantLocations.length; i++) {
                     if(position == elephantLocations[i]) {
                         imgSelected.src = "elephant.png";
                         score += 1;
                     }
-                }*/
+                }
 
                 //if(number of img selected matches lion) {change img to lion; substract 2 from score and set gameOver to true}
                 if(position == lionLocation) {
