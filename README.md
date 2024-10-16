@@ -2,6 +2,6 @@
 # WebApps-F24-Assignment-7
 Assignment 7 on DOM
 
-Hosted at: [safari.html](https://github.com/44-563-WebApps-F24/44563-webapps-f24-assignment7-Blhamon055/safari.html)
-Hosted at: [precision.html](https://github.com/44-563-WebApps-F24/44563-webapps-f24-assignment7-Blhamon055/precision.html)
-Hosted at: [divslist.html](https://github.com/44-563-WebApps-F24/44563-webapps-f24-assignment7-Blhamon055/divlist.html)
+Hosted at: [safari.html](https://44-563-webapps-f24.github.io/44563-webapps-f24-assignment7-Blhamon055/safari.html)
+Hosted at: [precision.html](https://44-563-webapps-f24.github.io/44563-webapps-f24-assignment7-Blhamon055/precision.html)
+Hosted at: [divlist.html](https://44-563-webapps-f24.github.io/44563-webapps-f24-assignment7-Blhamon055/divlist.html)
