@@ -36,26 +36,51 @@
 		<input id="textInput" type="text">
 
 		<p>Press the button to create an new element of type div and then add it to the container.</p>
-			<button onclick="makeNewDiv()">Add end</button>
+
+		<button onclick="addFront()">Add front</button>
+		<button onclick="makeNewDiv()">Add end</button>
+		<button onclick="remove()">Remove</button>
 		
 		
 	</body>
 	<script>
 		function makeNewDiv(){
 			/* make the div and its text */
-			let element = document.createElement("div")
+			let element = document.createElement("div");
 			element.innerHTML = document.getElementById("textInput").value;
-			element.style.color = "orange"
-			element.className = "divlist"
+			element.style.color = "orange";
+			element.className = "divlist";
 
 			/* add it to the container */
-			let container = document.getElementById('target')
+			let container = document.getElementById('target');
 			//container.insertBefore(element, container.firstChild)
-			container.appendChild(element)
+			container.appendChild(element);
 			/*let items = document.getElementsByClassName('queue')
 			let last = items.length - 1
 			console.log("last is " + last)
 			items[last].remove()*/
 		}
+
+		function remove() {
+			var divListItems = document.getElementsByClassName("divlist");
+			let index = divListItems.length;
+			if(index > 0) {
+				divListItems[Math.floor(index/2)].remove();
+			}
+		}
+
+		function addFront() {
+
+			let element = document.createElement("div");
+			element.innerHTML = document.getElementById("textInput").value;
+			element.style.color = "orange";
+			element.className = "divlist";
+
+			let container = document.getElementById('target')
+			container.insertBefore(element, container.firstChild);
+		}
+		
+
+
 	</script>
 </html>	
